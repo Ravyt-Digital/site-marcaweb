@@ -1,0 +1,10 @@
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { whatsapp } from "./data";
+
+export function Header(){return <header className="site-header"><Link href="/" className="brand" aria-label="Marca WebSites — início"><Image src="/marca-websites-logo.png" width={210} height={76} alt="Marca WebSites" priority/></Link><nav aria-label="Navegação principal"><Link href="/#projetos">Projetos</Link><Link href="/#servicos">Serviços</Link><Link href="/#sobre">Sobre</Link></nav><a className="header-cta" href={whatsapp} target="_blank" rel="noreferrer">Vamos conversar <ArrowUpRight size={16}/></a></header>}
+
+export function BrowserPreview({url,title,mobile=false,image}:{url:string,title:string,mobile?:boolean,image?:string}){return <div className={`browser-frame ${mobile?"mobile-frame":""}`}><div className="browser-bar"><i/><i/><i/><span>{url.replace("https://","").replace(/\/$/,"")}</span></div>{image?<div className="site-capture"><img src={image} alt={`Captura do site ${title}`}/></div>:<iframe title={`Prévia do site ${title}`} src={url} loading="lazy"/>}</div>}
+
+export function Footer(){return <><section className="final-cta" id="contato"><p className="eyebrow">Tem um projeto em mente?</p><h2>Sua empresa precisa de um site profissional?</h2><p>Vamos conversar sobre o seu projeto.</p><a className="button orange" href={whatsapp} target="_blank" rel="noreferrer">Falar pelo WhatsApp <ArrowUpRight size={19}/></a></section><footer><Image src="/marca-websites-logo.png" width={220} height={82} alt="Marca WebSites"/><div><p>Marcio Cabral — Web Designer Freelancer</p><a href="https://wa.me/5588996777332">WhatsApp: (88) 99677-7332</a><a href="mailto:marciocabralpro@gmail.com">marciocabralpro@gmail.com</a></div><div className="footer-links"><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a><Link href="/#projetos">Projetos</Link><Link href="/#sobre">Sobre</Link><Link href="/#contato">Contato</Link></div></footer></>}
