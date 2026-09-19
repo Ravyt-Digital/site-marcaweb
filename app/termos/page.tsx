@@ -1,0 +1,7 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Footer, Header } from "../components";
+
+export const metadata: Metadata = { title: "Termos de Uso", description: "Condições de uso do site institucional da Marca WebSites.", alternates: { canonical: "/termos" } };
+
+export default function TermsPage() { return <><Header/><main id="conteudo" className="legal-page"><p className="eyebrow">Informações institucionais</p><h1>Termos de Uso</h1><p className="legal-updated">Atualizados em 19 de setembro de 2026.</p><section><h2>Finalidade do site</h2><p>O site apresenta o portfólio, os serviços e os canais de contato da Marca WebSites. As informações têm caráter institucional e não substituem uma proposta comercial específica.</p></section><section><h2>Projetos apresentados</h2><p>Os trabalhos identificados como projetos selecionados representam sites desenvolvidos para clientes. Os itens da seção “Projetos Conceituais” são propostas comerciais e não indicam relação de contratação.</p></section><section><h2>Conteúdo e disponibilidade</h2><p>Textos, identidade e elementos autorais deste site não devem ser reproduzidos integralmente sem autorização. Links para sites externos podem mudar ou ficar indisponíveis sem controle da Marca WebSites.</p></section><section><h2>Contratação</h2><p>Escopo, valores, prazos e responsabilidades são definidos em proposta própria antes do início de cada projeto.</p></section><Link className="text-link" href="/">Voltar à página inicial</Link></main><Footer/></>; }

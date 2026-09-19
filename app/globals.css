@@ -57,3 +57,14 @@
   .manifest{height:88px}
   .work,.concepts,.services,.process,.about{padding-top:56px;padding-bottom:56px}
 }
+
+/* Technical audit: accessibility, legal pages, image stability and mobile conversion. */
+html{scroll-padding-top:24px}body{line-height:1.5}a:focus-visible,button:focus-visible{outline:3px solid #f7941d;outline-offset:4px}
+.skip-link{position:fixed;left:16px;top:12px;z-index:1000;background:#fff;color:#07101f;padding:12px 16px;border-radius:4px;transform:translateY(-160%)}.skip-link:focus{transform:translateY(0)}
+.header-cta-short{display:none}.hero h1 em{color:#8ba0ba}.hero-foot>p{color:#bcc8d7}.button{min-height:50px}.button.secondary{border-color:#ffffff66}.project-copy>p:first-child{color:#c6dbff}.project-description{color:#e0ebff}
+.browser-frame{margin:0}.browser-bar i{background:#7c8998}.browser-bar span{color:#44556a;font-size:.75rem}.preview-fallback{height:520px;display:grid;place-content:center;text-align:center;background:linear-gradient(145deg,#0c315d,#07101f);color:#fff;padding:24px}.preview-fallback span{font-size:clamp(2rem,4vw,4rem);font-weight:800;letter-spacing:-.05em}.preview-fallback small{text-transform:uppercase;letter-spacing:.16em;color:#8feafa;margin-top:12px}
+.site-capture{position:relative}.site-capture img{object-fit:cover;object-position:top}.mobile-frame .site-capture{height:658px}
+.legal-page{max-width:900px;margin:0 auto;padding:clamp(72px,9vw,130px) 24px}.legal-page h1,.not-found-page h1{font-size:clamp(3rem,7vw,6rem);line-height:.95;letter-spacing:-.06em;margin:28px 0}.legal-page section{border-top:1px solid #ffffff2b;padding:28px 0}.legal-page h2{font-size:1.5rem;margin:0 0 12px}.legal-page p,.not-found-page>p{color:#bdc9d8;line-height:1.75}.legal-page a{text-decoration:underline;text-underline-offset:4px}.legal-updated{margin-bottom:56px}.text-link{display:inline-block;margin-top:24px;font-weight:700}
+.not-found-page{min-height:70vh;padding:clamp(80px,11vw,150px) clamp(24px,7vw,112px);display:flex;flex-direction:column;justify-content:center}.not-found-page>p{max-width:650px;font-size:1.1rem}.not-found-page .actions{margin-top:28px}.footer-brand small{color:#aebdce}.mobile-whatsapp{display:none}
+@media(max-width:850px){.header-cta{display:flex}.preview-fallback{height:430px}.mobile-whatsapp{display:flex;position:fixed;right:14px;bottom:max(14px,env(safe-area-inset-bottom));z-index:20;align-items:center;gap:8px;background:#f7941d;color:#07101f;padding:13px 16px;border-radius:999px;font-weight:800;box-shadow:0 10px 30px #0007}}
+@media(max-width:520px){.site-header{padding-inline:16px}.brand img{width:124px}.header-cta{padding:10px 12px}.header-cta-full{display:none}.header-cta-short{display:inline}.preview-fallback{height:370px}.mobile-frame .site-capture{height:568px}}

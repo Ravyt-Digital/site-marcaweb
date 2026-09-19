@@ -1,0 +1,3 @@
+import type { MetadataRoute } from "next";
+import { projects, siteUrl } from "./data";
+export default function sitemap(): MetadataRoute.Sitemap { const lastModified = new Date("2026-09-19T00:00:00-03:00"); return [{ url: siteUrl, lastModified, changeFrequency: "monthly", priority: 1 }, ...projects.map(project => ({ url: `${siteUrl}/cases/${project.slug}`, lastModified, changeFrequency: "monthly" as const, priority: 0.8 })), { url: `${siteUrl}/privacidade`, lastModified, changeFrequency: "yearly", priority: 0.3 }, { url: `${siteUrl}/termos`, lastModified, changeFrequency: "yearly", priority: 0.3 }]; }

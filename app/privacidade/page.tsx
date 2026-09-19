@@ -1,0 +1,8 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Footer, Header } from "../components";
+import { email } from "../data";
+
+export const metadata: Metadata = { title: "Política de Privacidade", description: "Como a Marca WebSites trata informações enviadas pelos canais de contato.", alternates: { canonical: "/privacidade" } };
+
+export default function PrivacyPage() { return <><Header/><main id="conteudo" className="legal-page"><p className="eyebrow">Informações institucionais</p><h1>Política de Privacidade</h1><p className="legal-updated">Atualizada em 19 de setembro de 2026.</p><section><h2>Informações recebidas</h2><p>Este site não possui formulário próprio. Quando você inicia uma conversa pelo WhatsApp, envia um e-mail ou realiza uma ligação, os dados são tratados nos respectivos canais para responder à solicitação e dar continuidade ao atendimento.</p></section><section><h2>Finalidade e compartilhamento</h2><p>As informações recebidas são usadas para compreender o projeto, responder dúvidas, preparar propostas e manter o contato solicitado. A Marca WebSites não comercializa dados pessoais.</p></section><section><h2>Cookies e métricas</h2><p>No momento, este site não utiliza cookies de publicidade nem ferramenta própria de análise de audiência. Serviços externos acessados por links, como WhatsApp, seguem as políticas das respectivas plataformas.</p></section><section><h2>Seus direitos e contato</h2><p>Para solicitar informações, correção ou exclusão de dados mantidos durante o atendimento, escreva para <a href={`mailto:${email}`}>{email}</a>.</p></section><Link className="text-link" href="/">Voltar à página inicial</Link></main><Footer/></>; }
