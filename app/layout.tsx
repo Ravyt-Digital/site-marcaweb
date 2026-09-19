@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { ConsentAnalytics } from "./consent-analytics";
 
 const siteUrl = "https://marcaweb.site";
 
@@ -26,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className="antialiased"><a className="skip-link" href="#conteudo">Ir para o conteúdo principal</a>{children}</body>
+      <body className="antialiased"><a className="skip-link" href="#conteudo">Ir para o conteúdo principal</a>{children}<ConsentAnalytics/></body>
     </html>
   );
 }
